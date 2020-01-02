@@ -43,6 +43,10 @@ function uploadFile( ctx, options) {
   // 获取类型
   let fileType = options.fileType || 'common';
   let filePath = path.join( options.path,  fileType);
+<<<<<<< HEAD
+=======
+  let mkdirResult = mkdirsSync( filePath );
+>>>>>>> abe51e1a838d5a16d79552262f615407262258e6
 
   return new Promise((resolve, reject) => {
     console.log('文件上传中...');
@@ -54,10 +58,17 @@ function uploadFile( ctx, options) {
     // 解析请求文件事件
     busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
       let fileName = Math.random().toString(16).substr(2) + '.' + getSuffixName(filename);
+<<<<<<< HEAD
       let saveTo = path.join( filePath, fileName );
       // console.log(`_uploadFilePath: ${_uploadFilePath}`);
       // let saveTo = path.join(_uploadFilePath);
       // console.log(`saveTo: ${saveTo}`);
+=======
+      let _uploadFilePath = path.join( filePath, fileName );
+      console.log(`_uploadFilePath: ${_uploadFilePath}`);
+      let saveTo = path.join(_uploadFilePath);
+      console.log(`saveTo: ${saveTo}`);
+>>>>>>> abe51e1a838d5a16d79552262f615407262258e6
 
       // 文件保存到制定路径
       file.pipe(fs.createWriteStream(saveTo));
