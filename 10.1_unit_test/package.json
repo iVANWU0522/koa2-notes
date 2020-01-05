@@ -1,0 +1,14 @@
+{
+  "name": "10.1_unit_test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.11.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.0",
+    "supertest": "^4.0.2"
+  }
+}
