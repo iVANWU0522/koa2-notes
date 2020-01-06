@@ -1,12 +1,12 @@
- /**
-  * 工作台子路由
-  */
+/**
+ * 工作台子路由
+ */
 
- const router = require('koa-router')();
- const controller = require('./../controllers/work');
+const router = require('koa-router')()
+const controller = require('./../controllers/work')
 
- const routers = router
-     .get('/', controller.indexPage);
+const routers = router
+  .get('/', controller.indexPage)
 
 
- module.exports = routers;
+module.exports = routers
